@@ -1,0 +1,19 @@
+import type { ThemeMode } from '@/domain/entities/Theme';
+import type { ThemeRepository } from '@/data/repositories/ThemeRepository';
+
+export class LocalStorageThemeRepository implements ThemeRepository {
+  private readonly STORAGE_KEY = 'app_theme_mode';
+
+  getThemeMode(): ThemeMode | null {
+    const saved = localStorage.getItem(this.STORAGE_KEY);
+    return (saved as ThemeMode) || null;
+  }
+
+  setThemeMode(mode: ThemeMode): void {
+    localStorage.setItem(this.STORAGE_KEY, mode);
+  }
+
+  clearThemeMode(): void {
+    localStorage.removeItem(this.STORAGE_KEY);
+  }
+}

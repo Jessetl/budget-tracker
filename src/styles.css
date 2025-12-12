@@ -1,19 +1,33 @@
 @import 'tailwindcss';
+/* Variables CSS (hex) para paletas Light / Dark
+   Usa las variables con var(--color-...) o en Tailwind mediante tokens CSS
+   Tailwind está configurado con `darkMode: 'class'`, por lo que añadir
+   la clase `dark` en el elemento raíz aplicará la paleta dark. */
 
-/* Utilidad personalizada: contenedor tipo teléfono con max-width 500px */
-@layer utilities {
-  .max-w-phone {
-    max-width: 450px;
-  }
+@theme {
+  /* Light theme */
+  --color-primary: #ff4500;
+  --color-secondary: #4682b4;
+  --color-chocolate: #d2691e;
+  --color-background: #ffffff;
+  --color-surface: #f7f7f8;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-error: #dc2626;
+  --color-warning: #f59e0b;
+  --color-success: #10b981;
 }
 
-/* Ejemplo de clase auxiliar para simular el 'frame' del teléfono (opcional)
-	 Usa: class="phone-frame" junto con Tailwind utilities habituales */
-@layer components {
-  .phone-frame {
-    @apply mx-auto bg-white overflow-hidden;
-    max-width: 500px;
-    width: 100%;
-    height: 100vh;
-  }
+/* Dark theme (aplica cuando .dark está presente en <html> o <body>) */
+.dark {
+  --color-primary: #ff8a50;
+  --color-secondary: #7fb3e6;
+  --color-chocolate: #c07a46;
+  --color-background: #0b1220;
+  --color-surface: #0f1724;
+  --color-text: #e6eef8;
+  --color-text-secondary: #9aa6b2;
+  --color-error: #f87171;
+  --color-warning: #fbbf24;
+  --color-success: #34d399;
 }
