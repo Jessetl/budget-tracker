@@ -6,7 +6,11 @@ export class LocalStorageThemeRepository implements ThemeRepository {
 
   getThemeMode(): ThemeMode | null {
     const saved = localStorage.getItem(this.STORAGE_KEY);
-    return (saved as ThemeMode) || null;
+    const validModes: ThemeMode[] = ['light', 'dark'];
+
+    return saved && validModes.includes(saved as ThemeMode)
+      ? (saved as ThemeMode)
+      : null;
   }
 
   setThemeMode(mode: ThemeMode): void {

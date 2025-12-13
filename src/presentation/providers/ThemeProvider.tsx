@@ -37,15 +37,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     root.classList.toggle('dark', isDark);
     body.classList.toggle('dark', isDark);
 
-    if (typeof themeRepository.setThemeMode === 'function') {
-      try {
-        const res = themeRepository.setThemeMode(theme);
-        // handle async implementations without unhandled rejections
-        Promise.resolve(res).catch(() => {});
-      } catch {
-        // swallow sync errors from repo
-      }
-    }
+    themeRepository.setThemeMode(theme);
   }, [theme, themeRepository]);
 
   const toggleTheme = () => {
