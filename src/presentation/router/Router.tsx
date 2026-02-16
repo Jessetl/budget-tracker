@@ -7,7 +7,13 @@ const NotFound: React.FC = () => <div>404 — Página no encontrada</div>;
 
 export default function AppRouter(): React.JSX.Element {
   return (
-    <Suspense fallback={<div>Cargando...</div>}>
+    <Suspense
+      fallback={
+        <div role='status' aria-live='polite'>
+          Cargando...
+        </div>
+      }
+    >
       <Routes>
         <Route path='/' element={<Dashboard />} />
         <Route path='*' element={<NotFound />} />

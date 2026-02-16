@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeContext } from '@/presentation/contexts/ThemeContext';
 import type { ThemeMode } from '@/domain/entities/Theme';
-import type { ThemeRepository } from '@/data/repositories/ThemeRepository';
-import { LocalStorageThemeRepository } from '@/data/repositories/LocalStorageThemeRepository';
+import type { ThemeRepository } from '@/core/contracts/ThemeRepository';
+import { LocalStorageThemeRepository } from '@/infrastructure/repositories/LocalStorageThemeRepository';
 
 interface ThemeProviderProps {
   children: React.ReactNode;
