@@ -1,17 +1,10 @@
-import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './presentation/providers/ThemeProvider';
-import AppRouter from './presentation/router/Router';
-// Layouts
-import MainLayout from '@/shared/components/Layouts/MainLayout';
+import AppShell from './presentation/components/shells/AppShell';
 
 function App() {
   return (
     <ThemeProvider defaultTheme='light'>
-      <MainLayout>
-        <BrowserRouter>
-          <AppRouter />
-        </BrowserRouter>
-      </MainLayout>
+      <AppShell />
     </ThemeProvider>
   );
 }
