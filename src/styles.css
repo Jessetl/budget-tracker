@@ -15,14 +15,23 @@
    la clase `dark` en el elemento raíz aplicará la paleta dark. */
 
 @theme {
-  /* Light theme */
-  --color-primary: #ff4500;
-  --color-secondary: #4682b4;
+  /* Finance-focused palette — Light theme */
+  --color-finance-navy: #0f1d2e;
+  --color-finance-navy-light: #1a2d44;
+  --color-finance-navy-soft: #243b56;
+  --color-finance-emerald: #10b981;
+  --color-finance-emerald-light: #34d399;
+  --color-finance-emerald-dark: #059669;
+  --color-finance-slate: #64748b;
+  --color-finance-mist: #f0f4f8;
+
+  --color-primary: #0f1d2e;
+  --color-secondary: #64748b;
   --color-chocolate: #d2691e;
   --color-background: #ffffff;
-  --color-surface: #f7f7f8;
-  --color-text: #1f2937;
-  --color-text-secondary: #6b7280;
+  --color-surface: #f0f4f8;
+  --color-text: #0f1d2e;
+  --color-text-secondary: #64748b;
   --color-error: #dc2626;
   --color-warning: #f59e0b;
   --color-success: #10b981;
@@ -30,13 +39,13 @@
 
 /* Dark theme (aplica cuando .dark está presente en <html> o <body>) */
 .dark {
-  --color-primary: #ff8a50;
-  --color-secondary: #7fb3e6;
+  --color-primary: #34d399;
+  --color-secondary: #94a3b8;
   --color-chocolate: #c07a46;
-  --color-background: #0b1220;
-  --color-surface: #0f1724;
-  --color-text: #e6eef8;
-  --color-text-secondary: #9aa6b2;
+  --color-background: #0a1121;
+  --color-surface: #0f1829;
+  --color-text: #e2e8f0;
+  --color-text-secondary: #94a3b8;
   --color-error: #f87171;
   --color-warning: #fbbf24;
   --color-success: #34d399;
